@@ -1,0 +1,22 @@
+:root{
+    --elPerLine: 4;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    position: relative;
+    width: calc((100% / var(--elPerLine)) - 20px);
+    min-width: 250px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 0 10px;
+    box-shadow: 2px 4px 8px 2px rgba(34, 60, 80, 0.28);  
+}
