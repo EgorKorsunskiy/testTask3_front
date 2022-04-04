@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 const productState = new ProductState()
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <React.StrictMode>
       <App productState={productState}/>
     </React.StrictMode>

@@ -18,12 +18,12 @@ class MainPageHeader extends React.Component{
           <h1 className={styles.header}>Product List</h1>
           <Stack spacing={2} direction="row">
             <Button variant="contained">
-                <Link to="/add-product" style={{textDecoration: "none", color: "#fff"}}>add</Link>
+                <Link to="/add-product" style={{textDecoration: "none", color: "#fff"}}>ADD</Link>
             </Button>
             {
                 this.props.deleteMode?
                 <Button variant="contained" color="error" onClick={this.deleteClickHandler.bind(this)} id='delete-product-btn'>Delete</Button>:
-                <Button variant="contained" color="error" onClick={this.props.toggleDeleteMode} id='delete-product-btn'>Mass delete</Button>
+                <Button variant="contained" color="error" onClick={this.props.toggleDeleteMode} id='delete-product-btn'>MASS DELETE</Button>
             }
         </Stack>
       </div>

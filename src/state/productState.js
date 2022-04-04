@@ -36,6 +36,8 @@ export class ProductState{
     }
 
     addProduct(SKU, name, price, type, additionalInfo){
+        this._addProductLocally(SKU, name, price, type, additionalInfo)
+
         this._isRequetsEnded = false
         fetch(this._addProductURL, {
             method: "POST",
@@ -66,6 +68,10 @@ export class ProductState{
         })
 
         this._deleteProductsLocaly(ids)
+    }
+
+    _addProductLocally(SKU, name, price, type, additionalInfo){
+        this._products.push(new Product(SKU, name, price, 1, type, additionalInfo))
     }
 
     _deleteProductsLocaly(ids){
